@@ -29,28 +29,30 @@ I used code from this repo for drawing Choropleth map for Toronto. GeoJSon file 
   
 ### Some of the created graphs are 
   ![no of listings by bedroom](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/bedrooms_number%20of%20listings.png)
+  
   Looked into no of listings by no of bedrooms. 1 bedrooms apartment are the most common in Toronto area.
   
   ![no of listings by bathrooms](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/bathrooms_number%20of%20listings.png)
+  
   No of lsitings by no of bathrooms. 1 bathrooms apartment are the most common. 
   
   ![Real estate price and number of listings](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/Price%20point_histogram.png)
   Created a histogram of price points. We can see that it is right skewed. One of the reason for thsi graph is the presence of all types of houses i.e. 2 bedrooms, 3 bedrooms and 4 bedrooms etc.
   
   
-![Postal Code wise Listings](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/postal_code_frequency_more%20than%202.png)
+  ![Postal Code wise Listings](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/postal_code_frequency_more%20than%202.png)
 In this graph, we can see no of listings for different postal code. I put a filter of no of listings more than 2 to focus more on high frequency postal code. It also helped in hightlighting some of the error in postal codes. 
 
-![City_area_mean_price](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/city_area_price_bedrooms.png)
+  ![City_area_mean_price](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/city_area_price_bedrooms.png)
 Drew mean price points for different area of toronto by no of bedrooms. 
 
-![geo_json toronto all](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/geojson_all.PNG)
+  ![geo_json toronto all](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/geojson_all.PNG)
 Choropleth map for toronto for all the listings
 
-![geo_json toronto 2 bhk](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/geojson_2bhk.PNG)
+  ![geo_json toronto 2 bhk](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/geojson_2bhk.PNG)
 Choropleth map for toronto for all the 2 bedrooms real estate listings
 
-![geo_json toronto 3bhk](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/geojson_3bhk.PNG)
+  ![geo_json toronto 3bhk](https://github.com/princeatul/real_estate_prices_toronto/blob/master/graphs/geojson_3bhk.PNG)
 Choropleth map for toronto for all the 3 bedrooms real estate listings
 
 
