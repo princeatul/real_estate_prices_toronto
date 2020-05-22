@@ -15,7 +15,7 @@ click_next_button = "/html/body/form/div[5]/div[2]/span/div/div[4]/div[3]/span/s
 binary = FirefoxBinary('C:/Users/Prince.Atul/AppData/Local/Mozilla Firefox/firefox')
 driver = webdriver.Firefox(firefox_binary=binary)
 
-
+# saving all the relevant pages of the website
 def scrapping_function(current_url, click_next_button):
     driver.get(current_url)
     i = 1

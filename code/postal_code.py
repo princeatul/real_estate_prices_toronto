@@ -1,3 +1,4 @@
+# required packages
 import pandas as pd
 import os
 import time
@@ -7,8 +8,8 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from bs4 import BeautifulSoup
 
 
-
-def canada_post_postal_code(x):
+# function for getting postal code from google map
+def google_map_postal_code(x):
     search_string = x[1]
     binary = FirefoxBinary('C:/Users/Prince.Atul/AppData/Local/Mozilla Firefox/firefox')
     driver = webdriver.Firefox(firefox_binary=binary)
@@ -27,7 +28,7 @@ def canada_post_postal_code(x):
         driver.close()
         return('No PostalCode')
 
-
+# modifying address and keeping only street names 
 def add_correction(x):
     x = x.split('-')
     return (x[-1])
@@ -38,13 +39,10 @@ def find_postal_code (file_path):
     data['modified_address'] = 'no_address'
     data['modified_address'] = data['address'].apply(add_correction)
     data['postal_code'] = 'NA'
-    data['postal_code'] = data[['postal_code', 'modified_address']].apply(canada_post_postal_code, axis=1)
-    # driver.close()
+    data['postal_code'] = data[['postal_code', 'modified_address']].apply(google_map_postal_code, axis=1)
     return(data)
 
-
+# calling the function and saving results in a csv file
 output_df = find_postal_code ('output/toronto.csv')
-
-
 output_df.to_csv('output/t_2.csv', index=False)
 
