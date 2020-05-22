@@ -6,39 +6,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from bs4 import BeautifulSoup
 
-# # reading the csv file
-# def google_postal_code(x):
-#     search_string = '{} + postal code'.format(x[1])
-#     google_url = 'https://www.google.com'
-#     driver.get(google_url)
-#     time.sleep(2)
-#     driver.find_element_by_xpath('/html/body/div/div[3]/form/div[2]/div[1]/div[1]/div/div[2]/input').send_keys(search_string)
-#     elem = driver.find_element_by_xpath('/html/body/div/div[3]/form/div[2]/div[1]/div[3]/center/input[1]')
-#     elem.click()
-#     try:
-#         postal_code = driver.find_element_by_xpath('/html/body/div[6]/div[2]/div[9]/div[1]/div[2]/div/div[2]/div[2]/div/div/div[1]/div[1]/div/div[1]/div/div[1]/div/div[1]').text
-#         return(postal_code)
-#     except:
-#         return ('No PostalCode')
 
-# def canada_post_postal_code(x):
-#     search_string = x[1]
-#     binary = FirefoxBinary('C:/Users/Prince.Atul/AppData/Local/Mozilla Firefox/firefox')
-#     driver = webdriver.Firefox(firefox_binary=binary)
-#     cp_url = 'https://www.canadapost.ca/cpo/mc/personal/postalcode/fpc.jsf#'
-#     driver.get(cp_url)
-#     time.sleep(2)
-#     driver.find_element_by_xpath('//*[@id="addressComplete"]').send_keys(search_string)
-#     time.sleep(1)
-#     elem = driver.find_element_by_xpath('//*[@id="searchFpc"]')
-#     elem.click()
-#     time.sleep(2)
-#     try:
-#         postal_code = driver.find_element_by_xpath('//*[@id="printLabelContent"]').text
-#         driver.close()
-#         return(postal_code)
-#     except:
-#         return ('No PostalCode')
 
 def canada_post_postal_code(x):
     search_string = x[1]
@@ -74,22 +42,9 @@ def find_postal_code (file_path):
     # driver.close()
     return(data)
 
-# binary = FirefoxBinary('C:/Users/Prince.Atul/AppData/Local/Mozilla Firefox/firefox')
-# driver = webdriver.Firefox(firefox_binary=binary)
-# time.sleep(5)
+
 output_df = find_postal_code ('output/toronto.csv')
 
 
 output_df.to_csv('output/t_2.csv', index=False)
-
-
-
-
-
-
-
-
-##--------------------------------------------------------------------------------
-# import geocoder
-# g = geocoder.canadapost('453 Booth Street, Ottawa', key='<API KEY>')
 
