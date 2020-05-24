@@ -56,4 +56,4 @@ Choropleth map for toronto for all the 2 bedrooms real estate listings
 Choropleth map for toronto for all the 3 bedrooms real estate listings
 
 
-I have also posted this project ![here](https://yoursdata.net/project-from-scratch-scrapping-real-estate-prices-visualizing-it/)
+I have also posted this project [here](https://yoursdata.net/project-from-scratch-scrapping-real-estate-prices-visualizing-it/)
